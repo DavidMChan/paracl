@@ -8,6 +8,7 @@ assets/css/style.css  styles; light/dark themes are tokens at the top
 assets/js/main.js     mobile menu + active-section highlight in the nav
 assets/img/           favicon.svg, og.png (social share card), people/ (headshots)
 .nojekyll             tells GitHub Pages to serve files as-is
+deploy.sh             publishes the site to Cloudflare Pages
 ```
 
 ## Hero graphic
@@ -23,9 +24,17 @@ python3 -m http.server 8000
 
 ## Deploy
 
-The site is published with GitHub Pages from the `main` branch (root folder) of [DavidMChan/paracl](https://github.com/DavidMChan/paracl). It is live at **https://davidmchan.github.io/paracl/**. Pushing to `main` redeploys it, usually within a minute.
+The site is hosted on Cloudflare Pages (project `paracl`) at **https://paracl.pages.dev/**. The source lives in [DavidMChan/paracl](https://github.com/DavidMChan/paracl).
 
-If the URL ever changes (a new repo name or a custom domain), update `canonical`, `og:url` and `og:image` at the top of `index.html`.
+To publish changes, commit them and run:
+
+```sh
+./deploy.sh
+```
+
+It uploads only `index.html` and `assets/`. You need to be logged in with `wrangler login` to the Cloudflare account that owns the project.
+
+If the URL ever changes (for example a custom domain), update `canonical`, `og:url` and `og:image` at the top of `index.html`.
 
 ## Common updates
 
