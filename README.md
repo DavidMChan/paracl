@@ -7,7 +7,6 @@ index.html            all page content (one page, anchored sections)
 assets/css/style.css  styles; light/dark themes are tokens at the top
 assets/js/main.js     mobile menu + active-section highlight in the nav
 assets/img/           favicon.svg, og.png (social share card), people/ (headshots)
-.nojekyll             tells GitHub Pages to serve files as-is
 deploy.sh             publishes the site to Cloudflare Pages
 ```
 
