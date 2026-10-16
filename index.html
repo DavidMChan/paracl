@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ParaCL Workshop 2027</title>
+  <meta name="description" content="ParaCL: Prosodic and Paralinguistic Understanding and Generation. A workshop at ACL 2027 in Kyoto, Japan, on the understanding and generation of prosodic and paralinguistic signals.">
+  <meta name="theme-color" content="#17152e">
+
+  <link rel="canonical" href="https://davidmchan.github.io/paracl/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://davidmchan.github.io/paracl/">
+  <meta property="og:title" content="ParaCL: Prosodic and Paralinguistic Understanding and Generation">
+  <meta property="og:description" content="Beyond words, ParaCL connects speech, NLP, and multimodal AI communities to explore understanding and generation of prosodic and paralinguistic signals.">
+  <meta property="og:image" content="https://davidmchan.github.io/paracl/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" id="top">
+    <div class="wrap nav__inner">
+      <a class="brand" href="#top" aria-label="ParaCL home">
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 21c3-1 4-9 8-9s4 8 7 8 4-12 8-12 3 6 3 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>ParaCL</span>
+      </a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+        <span class="sr-only">Menu</span>
+        <span class="nav__bars" aria-hidden="true"></span>
+      </button>
+      <nav aria-label="Sections">
+        <ul class="nav__links" id="nav-links" role="list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#cfp">Call for Papers</a></li>
+          <li><a href="#dates">Dates</a></li>
+          <li><a href="#speakers">Speakers</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#organizers">Organizers</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- ───────────────────────── Hero ───────────────────────── -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero__text">
+        <p class="hero__eyebrow">ACL 2027 Workshop <span aria-hidden="true">·</span> Kyoto, Japan <span aria-hidden="true">·</span> August 18 or 19, 2027</p>
+        <h1 id="hero-title" class="hero__title">ParaCL</h1>
+        <p class="hero__subtitle">Prosodic and Paralinguistic Understanding and Generation</p>
+        <p class="hero__tagline">Beyond words, ParaCL connects speech, NLP, and multimodal AI communities to explore understanding and generation of prosodic and paralinguistic signals.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#cfp">Call for Papers</a>
+          <a class="btn btn--ghost" href="#dates">Important Dates</a>
+        </div>
+      </div>
+
+      <svg class="hero__contour" viewBox="0 0 1200 350" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+        <!-- Pitch track and waveform of "ParaCL" spoken by the macOS "Flo" voice; F0 extracted with Praat (parselmouth). -->
+        <defs>
+          <linearGradient id="f0-grad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1200" y2="0">
+            <stop offset="0" stop-color="#ff8a5c"/>
+            <stop offset=".5" stop-color="#ffc15e"/>
+            <stop offset="1" stop-color="#ff6f91"/>
+          </linearGradient>
+        </defs>
+        <g class="grid"><line x1="0" x2="1200" y1="73" y2="73"/><text x="1192" y="67" text-anchor="end">300 Hz</text><line x1="0" x2="1200" y1="183" y2="183"/><text x="1192" y="177" text-anchor="end">200 Hz</text></g>
+        <path class="wave" d="M30 298V302M36 297V303M42 297V303M48 297V303M54 296V304M60 296V304M66 296V304M72 295V305M78 296V304M84 295V305M90 285V315M96 269V331M102 269V331M108 268V332M114 268V332M120 269V331M126 270V330M132 269V331M138 270V330M144 269V331M150 272V328M156 271V329M162 272V328M168 270V330M174 271V329M180 272V328M186 271V329M192 271V329M198 273V327M204 273V327M210 274V326M216 276V324M222 275V325M228 278V322M234 279V321M240 281V319M246 283V317M252 282V318M258 282V318M264 281V319M270 282V318M276 282V318M282 282V318M288 281V319M294 282V318M300 283V317M306 281V319M312 280V320M318 278V322M324 277V323M330 277V323M336 275V325M342 274V326M348 275V325M354 275V325M360 275V325M366 279V321M372 280V320M378 282V318M384 282V318M390 282V318M396 296V304M402 296V304M408 297V303M414 296V304M420 296V304M426 295V305M432 295V305M438 294V306M444 294V306M450 295V305M456 295V305M462 294V306M468 293V307M474 294V306M480 295V305M486 294V306M492 295V305M498 293V307M504 294V306M510 295V305M516 296V304M522 296V304M528 296V304M534 297V303M540 297V303M546 282V318M552 273V327M558 275V325M564 275V325M570 275V325M576 276V324M582 275V325M588 277V323M594 276V324M600 277V323M606 277V323M612 275V325M618 276V324M624 277V323M630 277V323M636 278V322M642 277V323M648 278V322M654 278V322M660 278V322M666 277V323M672 278V322M678 277V323M684 278V322M690 277V323M696 279V321M702 278V322M708 279V321M714 277V323M720 277V323M726 277V323M732 276V324M738 276V324M744 275V325M750 275V325M756 274V326M762 274V326M768 272V328M774 272V328M780 271V329M786 271V329M792 274V326M798 273V327M804 275V325M810 275V325M816 274V326M822 275V325M828 274V326M834 275V325M840 275V325M846 275V325M852 277V323M858 277V323M864 276V324M870 276V324M876 276V324M882 276V324M888 275V325M894 276V324M900 276V324M906 277V323M912 278V322M918 278V322M924 279V321M930 278V322M936 282V318M942 278V322M948 278V322M954 280V320M960 279V321M966 284V316M972 279V321M978 279V321M984 280V320M990 287V313M996 279V321M1002 280V320M1008 285V315M1014 281V319M1020 281V319M1026 282V318M1032 283V317M1038 282V318M1044 282V318M1050 283V317M1056 282V318M1062 283V317M1068 284V316M1074 283V317M1080 284V316M1086 283V317M1092 283V317M1098 286V314M1104 283V317M1110 286V314M1116 294V306M1122 293V307M1128 296V304M1134 298V302M1140 297V303M1146 298V302M1152 298V302M1158 298V302M1164 298V302M1170 298V302"/>
+        <g class="f0-track">
+          <path class="f0" style="--i:0" pathLength="1" d="M85.1 94.7 L92.3 94.6 L99.4 94.1 L106.6 93.1 L113.8 91.7 L121.0 90.2 L128.2 88.8 L135.3 87.7 L142.5 86.4 L149.7 85.0 L156.9 83.5 L164.1 81.9 L171.2 80.6 L178.4 79.4 L185.6 78.1 L192.8 76.7 L200.0 75.4 L207.1 73.9 L214.3 72.4 L221.5 71.1 L228.7 70.0 L235.8 69.0 L243.0 67.9 L250.2 66.5 L257.4 65.0 L264.6 63.3 L271.7 61.8 L278.9 61.1 L286.1 61.9 L293.3 64.4 L300.5 68.2 L307.6 72.3 L314.8 76.2 L322.0 80.1 L329.2 84.4 L336.4 88.8 L343.5 92.8 L350.7 96.4 L357.9 99.9 L365.1 103.7 L372.3 108.0 L379.4 112.2 L386.6 115.4 L393.8 115.4 L401.0 114.1"/>
+          <path class="f0" style="--i:1" pathLength="1" d="M544.6 110.1 L551.7 109.4 L558.9 108.4 L566.1 107.7 L573.3 107.0 L580.5 105.9 L587.6 104.6 L594.8 103.2 L602.0 102.2 L609.2 101.0 L616.4 99.7 L623.5 98.2 L630.7 96.7 L637.9 95.1 L645.1 93.6 L652.3 92.6 L659.4 92.1 L666.6 92.0 L673.8 91.9 L681.0 91.6 L688.2 91.2 L695.3 90.7 L702.5 90.4 L709.7 90.5 L716.9 90.6 L724.1 90.9 L731.2 91.1 L738.4 91.4 L745.6 91.5 L752.8 91.4 L760.0 91.3 L767.1 91.2 L774.3 90.9 L781.5 90.6 L788.7 90.6 L795.8 91.9 L803.0 94.6 L810.2 98.0 L817.4 101.8 L824.6 106.1 L831.7 110.7 L838.9 115.5 L846.1 120.3 L853.3 125.5 L860.5 130.2 L867.6 134.7 L874.8 139.3 L882.0 144.1 L889.2 148.3 L896.4 152.7 L903.5 157.2 L910.7 162.1 L917.9 166.7 L925.1 172.0 L932.3 177.0 L939.4 181.7 L946.6 185.7 L953.8 190.8 L961.0 195.6 L968.2 200.5 L975.3 204.6 L982.5 209.4 L989.7 213.7 L996.9 217.4 L1004.1 219.9 L1011.2 221.7 L1018.4 222.9 L1025.6 224.0 L1032.8 224.9 L1040.0 225.8 L1047.1 226.4 L1054.3 227.1 L1061.5 228.1 L1068.7 229.4 L1075.8 230.7 L1083.0 231.6 L1090.2 232.1 L1097.4 232.5 L1104.6 232.9 L1111.7 233.2 L1118.9 233.5 L1126.1 233.5"/>
+        </g>
+        <g class="tones"><g><circle cx="279" cy="61" r="4"/><text x="279" y="42">H*</text></g><g><circle cx="772" cy="91" r="4"/><text x="772" y="72">H*</text></g><g class="tone--end"><circle cx="1126" cy="234" r="4"/><text x="1126" y="264">L-L%</text></g></g>
+      </svg>
+    </section>
+
+    <!-- ───────────────────────── About ───────────────────────── -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="wrap">
+        <p class="eyebrow"><span>01</span> About</p>
+        <h2 id="about-title">Language is more than words</h2>
+
+        <div class="about">
+          <div class="prose">
+            <p class="lede">Human listeners infer meaning not only from <em>what</em> is said, but <em>how</em> it is said.</p>
+            <p>From intonation, rhythm, and timing to gaze, laughter, sighs, and other non-verbal vocalizations, paralinguistic signals reveal aspects of speakers and interactions that transcripts rarely capture: emotion, engagement, uncertainty, politeness, sarcasm, social positioning, interpersonal coordination, and communicative intent.</p>
+            <p>Language technologies increasingly need these capabilities. Speech language models now operate over acoustic signals that expose prosody rather than transcripts. Multimodal language models must reason across speech, text, gaze, gesture, and behavior. Speech synthesis systems must produce appropriate emphasis, affect, style, timing, and conversational behavior.</p>
+            <p>Yet research on these signals is fragmented across several partially distinct communities. ParaCL brings the paralinguistic communities in speech, audio, vision, and language together to develop a <strong>shared computational research agenda</strong> around information carried alongside and beyond words: how paralinguistics should be represented, learned, interpreted, generated, and evaluated.</p>
+          </div>
+
+          <figure class="stat">
+            <figcaption class="stat__label">Paralinguistics papers in the ACL main track</figcaption>
+            <div class="stat__bars">
+              <div class="stat__row">
+                <span class="stat__year">2025</span>
+                <span class="stat__bar" style="--v:72"></span>
+                <span class="stat__num">72</span>
+              </div>
+              <div class="stat__row">
+                <span class="stat__year">2026</span>
+                <span class="stat__bar stat__bar--hi" style="--v:153"></span>
+                <span class="stat__num">153</span>
+              </div>
+            </div>
+            <p class="stat__note">72 of 3,084 accepted papers in 2025; 153 of 4,457 in 2026.</p>
+          </figure>
+        </div>
+
+        <h3 class="sub">Connecting communities</h3>
+        <div class="communities">
+          <article class="community">
+            <h4>Prosody &amp; phonetics</h4>
+            <p>Intonation, tone, prominence, phrasing, rhythm, and timing, along with their linguistic and interactional functions.</p>
+          </article>
+          <article class="community">
+            <h4>Computational paralinguistics &amp; affective computing</h4>
+            <p>Emotion, speaker states and traits, social behavior, non-verbal vocalizations, and related acoustic signals.</p>
+          </article>
+          <article class="community">
+            <h4>Dialogue, multimodal interaction &amp; pragmatics</h4>
+            <p>How these signals function in context, across turns, modalities, and conversational partners.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── Call for Papers ───────────────────────── -->
+    <section class="section section--alt" id="cfp" aria-labelledby="cfp-title">
+      <div class="wrap">
+        <p class="eyebrow"><span>02</span> Call for Papers</p>
+        <h2 id="cfp-title">Call for Papers</h2>
+        <p class="intro">We invite original research papers and position/synthesis papers addressing both <strong>understanding</strong> and <strong>generation</strong> of prosodic and paralinguistic signals. Topics include, but are not limited to:</p>
+
+        <ol class="topics" role="list">
+          <li>Prosody and paralinguistics in speech language models, multimodal LLMs, ASR, speech translation, dialogue, and agents</li>
+          <li>Computational modeling and representation of paralinguistics, including intonation, tone, rhythm, timing, and phrasing</li>
+          <li>Expressive and controllable speech generation, including prosody, speaking style, affect, and interactional behavior</li>
+          <li>Emotion, stance, social meaning, and non-verbal behavior</li>
+          <li>Multimodal and interactional communication, including gesture, gaze, facial expression, turn-taking, and entrainment</li>
+          <li>Cross-lingual, cross-cultural, and individual variation in paralinguistics</li>
+          <li>Datasets, metrics, and benchmarks</li>
+          <li>Robustness, fairness, privacy, ethics, and responsible applications of paralinguistics</li>
+        </ol>
+
+        <div class="callouts">
+          <div class="callout">
+            <h3>Work across boundaries</h3>
+            <p>We especially encourage work that crosses traditional boundaries: for example, papers connecting linguistic prosody with speech foundation models, computational paralinguistics with pragmatics or dialogue, or empirical observations from one community that challenge assumptions prevalent in another.</p>
+          </div>
+          <div class="callout">
+            <h3>Beyond read English speech</h3>
+            <p>We particularly welcome multilingual, cross-variety, community-partnered, and conversational work, as well as computational, phonetic, psycholinguistic, interactional, and critical perspectives.</p>
+          </div>
+        </div>
+
+        <h3 class="sub">Submission guidelines</h3>
+        <div class="guidelines">
+          <div class="guide">
+            <h4>Paper types</h4>
+            <dl class="kv">
+              <div><dt>Long papers</dt><dd>up to 8 pages</dd></div>
+              <div><dt>Short papers</dt><dd>up to 4 pages</dd></div>
+            </dl>
+            <p>Both lengths accept original research and position/synthesis papers. Page limits exclude references.</p>
+          </div>
+          <div class="guide">
+            <h4>Tracks</h4>
+            <dl class="kv">
+              <div><dt>Archival</dt><dd>Published in the workshop proceedings</dd></div>
+              <div><dt>Non-archival</dt><dd>Presented at the workshop, not in the proceedings</dd></div>
+            </dl>
+            <p>The non-archival track welcomes works in progress and application-driven perspectives.</p>
+          </div>
+          <div class="guide">
+            <h4>How to submit</h4>
+            <dl class="kv">
+              <div><dt>Direct</dt><dd>Submit via OpenReview</dd></div>
+              <div><dt>ARR</dt><dd>Commit papers with ACL Rolling Review reviews</dd></div>
+            </dl>
+            <p>Format submissions with the <a href="https://github.com/acl-org/acl-style-files">official ACL style files</a>. Accepted papers will be presented as posters, with selected papers featured in a spotlight session.</p>
+          </div>
+        </div>
+
+        <div class="submit">
+          <span class="btn is-disabled">OpenReview submission site: coming soon</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── Important Dates ───────────────────────── -->
+    <section class="section" id="dates" aria-labelledby="dates-title">
+      <div class="wrap">
+        <p class="eyebrow"><span>03</span> Important Dates</p>
+        <h2 id="dates-title">Important dates</h2>
+        <p class="intro">All deadlines are 11:59 PM <abbr title="Anywhere on Earth (UTC−12)">AoE</abbr>.</p>
+
+        <ol class="timeline" role="list">
+          <li><span class="timeline__what">Direct submission deadline</span><span class="timeline__when">TBA</span></li>
+          <li><span class="timeline__what">ARR commitment deadline</span><span class="timeline__when">TBA</span></li>
+          <li><span class="timeline__what">Notification of acceptance</span><span class="timeline__when">TBA</span></li>
+          <li><span class="timeline__what">Camera-ready deadline</span><span class="timeline__when">TBA</span></li>
+          <li class="timeline__main"><span class="timeline__what">Workshop at ACL 2027, Kyoto</span><span class="timeline__when">Aug 18 or 19, 2027</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── Speakers ───────────────────────── -->
+    <section class="section section--alt" id="speakers" aria-labelledby="speakers-title">
+      <div class="wrap">
+        <p class="eyebrow"><span>04</span> Invited Speakers</p>
+        <h2 id="speakers-title">Invited speakers <span class="tag tag--soft">Tentative</span></h2>
+
+        <ul class="people people--speakers" role="list">
+          <li class="person">
+            <img class="avatar" src="assets/img/people/nigel-ward.jpg" alt="" width="320" height="320" loading="lazy">
+            <div>
+              <h3 class="person__name"><a href="https://www.cs.utep.edu/nigel/">Nigel Ward</a></h3>
+              <p class="person__aff">University of Texas at El Paso</p>
+            </div>
+          </li>
+          <li class="person">
+            <img class="avatar" src="assets/img/people/eva-szekely.jpg" alt="" width="320" height="320" loading="lazy">
+            <div>
+              <h3 class="person__name"><a href="https://www.kth.se/profile/szekely">Éva Székely</a></h3>
+              <p class="person__aff">KTH Royal Institute of Technology</p>
+            </div>
+          </li>
+          <li class="person">
+            <img class="avatar" src="assets/img/people/petra-wagner.jpg" alt="" width="320" height="320" loading="lazy">
+            <div>
+              <h3 class="person__name"><a href="https://www.uni-bielefeld.de/fakultaeten/linguistik-literaturwissenschaft/personen/petra-wagner/">Petra Wagner</a></h3>
+              <p class="person__aff">Bielefeld University</p>
+            </div>
+          </li>
+          <li class="person">
+            <img class="avatar" src="assets/img/people/larry-heck.jpg" alt="" width="320" height="320" loading="lazy">
+            <div>
+              <h3 class="person__name"><a href="https://larryheck.github.io/">Larry Heck</a></h3>
+              <p class="person__aff">Georgia Tech</p>
+            </div>
+          </li>
+          <li class="person">
+            <img class="avatar" src="assets/img/people/alex-acero.jpg" alt="" width="320" height="320" loading="lazy">
+            <div>
+              <h3 class="person__name"><a href="https://scholar.google.com/citations?user=YdNmnJAAAAAJ">Alex Acero</a></h3>
+              <p class="person__aff">Zoom</p>
+            </div>
+          </li>
+          <li class="person">
+            <img class="avatar" src="assets/img/people/emre-eskimez.jpg" alt="" width="320" height="320" loading="lazy">
+            <div>
+              <h3 class="person__name"><a href="https://scholar.google.com/citations?user=iLepRMwAAAAJ">Emre Eskimez</a></h3>
+              <p class="person__aff">Sesame</p>
+            </div>
+          </li>
+          <!-- Tentative in the proposal. Uncomment once confirmed.
+          <li class="person">
+            <img class="avatar" src="assets/img/people/taehong-cho.jpg" alt="" width="320" height="320" loading="lazy">
+            <div>
+              <h3 class="person__name"><a href="https://tcho.hanyang.ac.kr/home">Taehong Cho</a></h3>
+              <p class="person__aff">Hanyang University</p>
+            </div>
+          </li>
+          -->
+        </ul>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── Schedule ───────────────────────── -->
+    <section class="section" id="schedule" aria-labelledby="schedule-title">
+      <div class="wrap">
+        <p class="eyebrow"><span>05</span> Schedule</p>
+        <h2 id="schedule-title">Schedule <span class="tag tag--soft">Tentative</span></h2>
+        <p class="intro">Times are in Japan Standard Time (UTC+9). ParaCL is hybrid: attend in person in Kyoto or online through the ACL 2027 platform. Talks will be recorded.</p>
+
+        <div class="schedule">
+          <table>
+            <caption class="sr-only">Tentative workshop schedule</caption>
+            <thead>
+              <tr><th scope="col">Time</th><th scope="col">Session</th></tr>
+            </thead>
+            <tbody>
+              <tr class="s s--misc"><td>8:30–8:40</td><td>Opening Remarks</td></tr>
+              <tr class="s s--talk"><td>8:40–10:00</td><td>Invited Talks</td></tr>
+              <tr class="s s--poster"><td>10:00–11:00</td><td>Coffee Break &amp; Poster Session</td></tr>
+              <tr class="s s--talk"><td>11:00–11:40</td><td>Invited Talk</td></tr>
+              <tr class="s s--spot"><td>11:40–12:10</td><td>Spotlight Session <span class="muted">(Poster Highlights)</span></td></tr>
+              <tr class="s s--break"><td>12:10–14:00</td><td>Lunch Break</td></tr>
+              <tr class="s s--talk"><td>14:00–15:30</td><td>Invited Talks</td></tr>
+              <tr class="s s--poster"><td>15:30–16:30</td><td>Coffee Break &amp; Poster Session</td></tr>
+              <tr class="s s--talk"><td>16:30–17:50</td><td>Invited Talks</td></tr>
+              <tr class="s s--panel"><td>17:50–18:30</td><td>Panel Discussion</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── Organizers ───────────────────────── -->
+    <section class="section section--alt" id="organizers" aria-labelledby="organizers-title">
+      <div class="wrap">
+        <p class="eyebrow"><span>06</span> Organizers</p>
+        <h2 id="organizers-title">Organizers</h2>
+
+        <ul class="people people--org" role="list">
+          <li class="person">
+            <img class="avatar" src="assets/img/people/david-chan.jpg" alt="" width="320" height="320" loading="lazy">
+            <div>
+              <h3 class="person__name"><a href="https://dchan.cc/">David M. Chan</a></h3>
+              <p class="person__aff">UC Berkeley / UC Irvine</p>
+            </div>
+          </li>
+          <li class="person">
+            <img class="avatar" src="assets/img/people/jiawei-zhou.jpg" alt="" width="320" height="320" loading="lazy">
+            <div>
+              <h3 class="person__name"><a href="https://joezhouai.com/">Jiawei Zhou</a></h3>
+              <p class="person__aff">Stony Brook University</p>
+            </div>
+          </li>
+          <li class="person">
+            <img class="avatar" src="assets/img/people/dinesh-manocha.jpg" alt="" width="320" height="320" loading="lazy">
+            <div>
+              <h3 class="person__name"><a href="https://www.cs.umd.edu/people/dmanocha">Dinesh Manocha</a></h3>
+              <p class="person__aff">University of Maryland, College Park</p>
+            </div>
+          </li>
+          <li class="person">
+            <img class="avatar" src="assets/img/people/david-harwath.jpg" alt="" width="320" height="320" loading="lazy">
+            <div>
+              <h3 class="person__name"><a href="https://www.cs.utexas.edu/~harwath/">David Harwath</a></h3>
+              <p class="person__aff">UT Austin</p>
+            </div>
+          </li>
+          <li class="person">
+            <img class="avatar" src="assets/img/people/alane-suhr.jpg" alt="" width="320" height="320" loading="lazy">
+            <div>
+              <h3 class="person__name"><a href="https://www.alanesuhr.com/">Alane Suhr</a></h3>
+              <p class="person__aff">UC Berkeley</p>
+            </div>
+          </li>
+          <li class="person">
+            <img class="avatar" src="assets/img/people/fiona-ryan.jpg" alt="" width="320" height="320" loading="lazy">
+            <div>
+              <h3 class="person__name"><a href="https://fkryan.github.io/">Fiona Ryan</a></h3>
+              <p class="person__aff">UC Berkeley</p>
+            </div>
+          </li>
+          <li class="person">
+            <img class="avatar" src="assets/img/people/gopala-anumanchipalli.jpg" alt="" width="320" height="320" loading="lazy">
+            <div>
+              <h3 class="person__name"><a href="https://people.eecs.berkeley.edu/~gopala/">Gopala K. Anumanchipalli</a></h3>
+              <p class="person__aff">UC Berkeley</p>
+            </div>
+          </li>
+          <li class="person">
+            <img class="avatar" src="assets/img/people/shinji-watanabe.jpg" alt="" width="320" height="320" loading="lazy">
+            <div>
+              <h3 class="person__name"><a href="https://sw005320.github.io/">Shinji Watanabe</a></h3>
+              <p class="person__aff">Carnegie Mellon University</p>
+            </div>
+          </li>
+          <li class="person">
+            <img class="avatar" src="assets/img/people/tony-woo.jpg" alt="" width="320" height="320" loading="lazy">
+            <div>
+              <h3 class="person__name"><a href="https://tonywoo.me/">Tony Woo</a></h3>
+              <p class="person__aff">Georgia Tech</p>
+            </div>
+          </li>
+          <li class="person">
+            <img class="avatar" src="assets/img/people/kalvin-chang.jpg" alt="" width="320" height="320" loading="lazy">
+            <div>
+              <h3 class="person__name"><a href="https://kalvinchang.github.io/">Kalvin Chang</a></h3>
+              <p class="person__aff">UC Berkeley</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── Contact ───────────────────────── -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact__inner">
+        <div>
+          <p class="eyebrow"><span>07</span> Contact</p>
+          <h2 id="contact-title">Contact the organizers</h2>
+        </div>
+        <a class="btn btn--primary btn--lg" href="mailto:davidchan@berkeley.edu?subject=ParaCL%20Workshop">davidchan@berkeley.edu</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p><strong>ParaCL</strong>: Prosodic and Paralinguistic Understanding and Generation</p>
+      <p><a href="#top">Back to top ↑</a></p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
